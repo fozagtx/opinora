@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-ink: #0e3b39;
+  --color-cream: #f4f0e6;
+  --color-sun: #f2ee6b;
+  --color-no: #c8553d;
+  --font-display: var(--font-archivo);
+  --font-sans: var(--font-archivo);
+  --font-mono: var(--font-plex);
+}
+
+body {
+  background: #f4f0e6;
+  color: #0e3b39;
+  font-family: var(--font-archivo), system-ui, sans-serif;
+}
+
+.font-display { font-family: var(--font-archivo); font-weight: 900; font-stretch: 112%; letter-spacing: -0.02em; }
+.mono { font-family: var(--font-plex), ui-monospace, monospace; }
+.label { font-family: var(--font-plex), monospace; font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; }
+
+.panel { background: #fff; border: 2px solid #0e3b39; border-radius: 28px; padding: 20px; }
+.field { background: #fff; border: 2px solid #0e3b39; border-radius: 16px; padding: 12px 14px; outline: none; width: 100%; }
+.field:focus { box-shadow: 0 0 0 4px #f2ee6b; }
+
+.chip { font-family: var(--font-plex), monospace; font-size: 13px; text-transform: uppercase; border: 2px solid #0e3b39; border-radius: 999px; padding: 6px 14px; background: #fff; transition: background 150ms ease; }
+.chip:hover { background: #f4f0e6; }
+.chip-on, .chip-on:hover { background: #0e3b39; color: #f4f0e6; }
+
+.btn-sun, .btn-ink, .btn-no, .btn-ghost { display: inline-flex; align-items: center; justify-content: center; gap: 8px; border-radius: 999px; padding: 14px 24px; font-weight: 800; border: 2px solid #0e3b39; transition: transform 150ms ease, opacity 150ms ease; }
+.btn-sun { background: #f2ee6b; }
+.btn-ink { background: #0e3b39; color: #f4f0e6; }
+.btn-no { background: #c8553d; border-color: #c8553d; color: #fff; }
+.btn-ghost { background: #fff; }
+.btn-sun:hover, .btn-ink:hover, .btn-no:hover, .btn-ghost:hover { transform: translateY(-1px); }
+button:disabled { opacity: 0.55; transform: none; cursor: not-allowed; }
+
+.side { display: flex; justify-content: space-between; align-items: center; border: 2px solid #0e3b39; border-radius: 18px; padding: 14px 16px; font-weight: 900; text-transform: uppercase; font-size: 20px; background: #fff; }
+.side-yes { background: #0e3b39; color: #f4f0e6; }
+.side-no { background: #c8553d; border-color: #c8553d; color: #fff; }
+
+.wallet-adapter-button { background: #0e3b39 !important; color: #f4f0e6 !important; border-radius: 999px !important; height: 40px !important; padding: 0 18px !important; font-family: var(--font-archivo) !important; font-weight: 800 !important; font-size: 14px !important; display: inline-flex; align-items: center; }
+.wallet-adapter-button-trigger:hover { opacity: 0.9; }
+.wallet-adapter-modal-wrapper { background: #fff !important; border: 2px solid #0e3b39; border-radius: 28px !important; }
+.wallet-adapter-modal-title, .wallet-adapter-modal-list .wallet-adapter-button { color: #0e3b39 !important; }
+.wallet-adapter-modal-list .wallet-adapter-button { background: #f4f0e6 !important; border-radius: 16px !important; margin: 4px 0; width: 100%; }
+.wallet-adapter-modal-button-close { background: #f4f0e6 !important; }
+.wallet-adapter-modal-button-close svg { fill: #0e3b39 !important; }
+.wallet-adapter-dropdown-list { background: #fff !important; border: 2px solid #0e3b39; }
+.wallet-adapter-dropdown-list-item { color: #0e3b39 !important; }
