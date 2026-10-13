@@ -15,9 +15,11 @@ export default async function Home() {
       .catch(() => [] as Market[]),
   ]);
   const hero = [...mine, ...open].slice(0, 3);
+  const missingKey = !process.env.PANTA_API_KEY;
 
   return (
     <div className="mx-auto flex max-w-5xl flex-col gap-20 px-4 pb-10 pt-14">
+      {missingKey && <p className="mono rounded-2xl border-2 border-no bg-white px-4 py-3 text-sm text-no">Set PANTA_API_KEY to load markets.</p>}
       <section className="grid items-center gap-10 md:grid-cols-[1.15fr_1fr]">
         <div className="flex flex-col gap-6">
           <h1 className="font-display text-5xl uppercase leading-[0.92] sm:text-7xl">Put your take on the line.</h1>

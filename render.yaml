@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: opinora
+    runtime: node
+    region: oregon
+    plan: free
+    buildCommand: npm ci && npm run build
+    startCommand: npm start
+    healthCheckPath: /
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      - key: PANTA_API_KEY
+        sync: false

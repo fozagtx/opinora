@@ -34,6 +34,8 @@ echo "PANTA_API_KEY=your_key" > .env.local
 npm run dev
 ```
 
+Deploy: `render.yaml` sets up a free Render web service; add `PANTA_API_KEY` when Render asks.
+
 Get a key from the [Panta dashboard](https://www.panta.market/). The API and Solana RPC URLs live in `src/lib/config.ts`.
 
 Stack: Next.js 16, React 19, Tailwind 4, Solana wallet adapter.
